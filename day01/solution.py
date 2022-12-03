@@ -1,3 +1,8 @@
+"""
+Advent of Code 2022
+--- Day 1: Calorie Counting ---
+"""
+
 import csv
 
 # import csv as a list
