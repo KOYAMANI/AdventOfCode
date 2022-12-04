@@ -9,7 +9,7 @@ Advent of Code 2022
 
 def get_input(filename):
     with open(filename, "r") as f:
-        return f.readlines()
+        return f.read().splitlines()
 
 
 def solve_part1(rucksacks):
@@ -41,9 +41,7 @@ def solve_part2(rucksacks):
         group = set(rucksacks[i]) & set(rucksacks[i + 1]) & set(rucksacks[i + 2])
         for c in group:
             # print("The common letters are:", c)
-            if c == '\n':
-                continue
-            elif c.islower():
+            if c.islower():
                 priorities += ord(c)-96
             else:
                 priorities += ord(c)-38
