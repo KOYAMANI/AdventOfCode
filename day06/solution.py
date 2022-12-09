@@ -8,21 +8,13 @@ with open("06_input.txt", "r") as f:
     data = f.read()
 
 
-def solve_part1(text):
+def solve(text, k):
     for i in range(len(text)):
-        a = text[i:i+4]
+        a = text[i:i+k]
         s = set(a)
-        if len(s) == 4:
-            return i+4
+        if len(s) == k:
+            return i+k
 
 
-def solve_part2(text):
-    for i in range(len(text)):
-        a = text[i:i+14]
-        s = set(a)
-        if len(s) == 14:
-            return i+14
-
-
-print(solve_part1(data))
-print(solve_part2(data))
+print(solve(data, 4))
+print(solve(data, 14))
